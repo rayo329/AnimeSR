@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block encabezado %}
+<h1>Animes nuevos similares a los que te gustan:</h1>
+{% endblock %}
+	{% block contenido %}
+	
+	<h1>{{mensaje}}</h1>
+ 	<l>
+    	{% for anime, score in items %}
+    	<dt><b>Titulo: </b>{{anime.titulo}}</dt>
+		<dt><img src="{{anime.imagen}}"></dt>
+		<dt><b>Episodios: </b>{{anime.episodios}}</dt>
+		<dt><b>Generos: </b>{{anime.generos}}</dt>
+		<dt><b>Puntuacion media de los usuarios: </b>{{anime.puntuacion_BD}}</dt>
+		<dt><b>Sinopsis: </b>{{anime.sinopsis}}</dt>
+    	<li>Similarity: {{score | floatformat:"2"}}</li>
+    	<br>
+    	<br>
+    	{% endfor %}
+    </l>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block encabezado %}
+<h1> Confirmacion </h1>
+{% endblock %}
+  {% block contenido %}
+    <h3>AVISO: Se va a proceder a la carga de la base de datos, este proceso puede tardar unos minutos.</h3>
+    <h3>Se recomienda no hacerlo ya que la base de datos esta cargada, y a veces la web del scrapping banea temporalmente la IP al realizar muchas consultas.</h3>
+    <form id='formulario' method='post' action=''>{% csrf_token %}
+		<input type="submit" name="Confirmar" value="Confirmar">
+		<input type="submit" name="Cancelar" value="Cancelar">
+	</form>
+ {% endblock %}

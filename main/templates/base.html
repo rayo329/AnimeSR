@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+	<meta charset='unicode'>
+	<style>
+	{% block style_css %}{% endblock %}
+	</style>
+</head>
+<body>
+	<header> 
+		{% block encabezado %}{% endblock %}
+
+			<dd><a href="/index"</a></dd>
+			<dd><a href="/carga">Cargar la base de datos</a></dd>
+			<dd><a href="/animes">Lista de animes</a></dd>
+			<dd><a href="/loadRS">Carga de datos para el sistema de recomendacion</a></dd>
+			<dd><a href="/similarAnimes">Recomendacion de animes de la nueva temporada de cierto genero</a></dd>
+			<dd><a href="/busqueda">Busca anime en la base de datos (titulo o sinopsis)</a></dd>
+			<dd><a href="/busquedaGenero">Busca animes por genero en la base de datos</a></dd>
+		<hr>
+	</header>
+<section>
+	{% block contenido %}{% endblock %}
+</section>
+	{% block pie %}{% endblock %} 
+</body>
+</html>

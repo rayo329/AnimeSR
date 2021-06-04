@@ -1,0 +1,13 @@
+
+{% extends 'base.html' %}
+
+{% block encabezado %}
+	<h1>Buscar Anime</h1>
+{% endblock %}
+
+{% block contenido %}
+	<form id='form' method='get' action=''>
+    	{{form.as_p}}
+    <p><input type='submit' value='Confirm'/></p>
+    </form>
+{% endblock %}

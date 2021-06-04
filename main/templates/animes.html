@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block encabezado %}
+<h1> Animes </h1>
+{% endblock %}
+{% block contenido %}
+	{% for row in animes %}
+		<dt><b>Id: </b>{{row.id}}</dt>
+		<dt><b>Titulo: </b>{{row.titulo}}</dt>
+		<dt><img src="{{row.imagen}}"></dt>
+		<dt><b>Episodios: </b>{{row.episodios}}</dt>
+		<dt><b>Generos: </b>{{row.generos}}</dt>
+		<dt><b>Puntuacion del usuario: </b>{{row.puntuacion_usuario}}</dt>
+		<dt><b>Puntuacion media de los usuarios: </b>{{row.puntuacion_BD}}</dt>
+		<dt><b>Sinopsis: </b>{{row.sinopsis}}</dt>
+		<br>
+		<br>
+	{% endfor %}
+{% endblock %}

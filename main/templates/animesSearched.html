@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block encabezado %}
+<h1>Animes encontrados:</h1>
+{% endblock %}
+	{% block contenido %}
+ 	<l>
+    	{% for anime in animes %}
+    	<dt><b>Titulo: </b>{{anime.titulo}}</dt>
+		<dt><img src="{{anime.imagen}}"></dt>
+		<dt><b>Episodios: </b>{{anime.episodios}}</dt>
+		<dt><b>Generos: </b>{{anime.generos}}</dt>
+		<dt><b>Puntuacion media de los usuarios: </b>{{anime.puntuacion_BD}}</dt>
+		<dt><b>Sinopsis: </b>{{anime.sinopsis}}</dt>
+    	<br>
+    	<br>
+    	{% endfor %}
+    </l>
+{% endblock %}
